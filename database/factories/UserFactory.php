@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use Faker\Provider\ar_SA\Person;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
@@ -14,7 +15,9 @@ class UserFactory extends Factory
      */
     public function definition(): array
     {
-        $firstName = $this->faker->firstName();
+        $gender = ['male', 'female'][rand(0, 1)];
+
+        $firstName = $gender === 'male' ? $this->faker->firstNameMale() : $this->faker->firstNameFemale();
         $lastName = $this->faker->lastName();
 
         $fullName = $firstName . ' ' . $lastName;
@@ -22,13 +25,15 @@ class UserFactory extends Factory
         $email = $username . '@dispostable.com';
 
         return [
+            'gender' => $gender,
             'name' => $fullName,
             'first_name' => $firstName,
             'last_name' => $lastName,
             'username' => $username,
-            'phone' => $this->faker->e164PhoneNumber(),
+            'phone' => substr($this->faker->e164PhoneNumber(), 2),
             'email' => $email,
             'address' => $this->faker->address(),
+            'about' => $this->faker->realText(),
             'email_verified_at' => now(),
             'password' => $this->faker->password(8),
             'remember_token' => Str::random(32),

@@ -39,7 +39,7 @@ class AddFakeUsers extends Command
      */
     public function handle(): int
     {
-        $users = User::factory(1)->make();
+        $users = User::factory(200)->make();
 
         foreach ($users as $user) {
             if (User::query()->where('email', $user->email)->exists()) {

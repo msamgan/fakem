@@ -5,6 +5,8 @@
             <div class="col-12">
                 <div class="mb-2 mr-2 float-right">
                     <button class="btn btn-primary" onclick="window.location.reload()">Generate New</button>
+                    <a target="_blank" href="https://www.dispostable.com/inbox/{{ $user->username }}/"
+                       class="btn btn-success">Jump To Inbox</a>
                 </div>
             </div>
             <div class="col-12">
@@ -23,11 +25,6 @@
                     </tbody>
                     @endforeach
                 </table>
-            </div>
-            <div class="col-12 mt-3">
-                <div class="float-right">
-                    <a target="_blank" href="https://www.dispostable.com/inbox/{{ $user->username }}/">Jump to Inbox</a>
-                </div>
             </div>
         </div>
     </div>
