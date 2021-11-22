@@ -19,10 +19,10 @@ php artisan view:cache
 php artisan optimize
 
 # Install node modules
-npm install
+#npm install
 
 # Build assets using Laravel Mix
-npm run prod
+#npm run prod
 
 # Turn off maintenance mode
 php artisan up
