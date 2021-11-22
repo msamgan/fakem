@@ -3,10 +3,23 @@
     <div class="container w-50">
         <div class="row user-info-card">
             <div class="col-12">
-                <div class="mb-2 mr-2 float-right">
-                    <button class="btn btn-primary" onclick="window.location.reload()">Generate New</button>
-                    <a target="_blank" href="https://www.dispostable.com/inbox/{{ $user->username }}/"
-                       class="btn btn-success">Jump To Inbox</a>
+                <div class="mb-2 mr-2">
+                    <form  class="d-flex align-items-center">
+                        <div class="form-group mr-20 gender-filter">
+                            <label for="gender"><strong>Gender</strong></label>
+                            <select id="gender" name="gender" class="form-control">
+                                <option value="any">Any</option>
+                                @foreach(genders() as $gender)
+                                    <option @if(request('gender') === $gender) selected
+                                            @endif value="{{ $gender }}">{{ $gender }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+
+                        <button class="btn btn-primary mr-20" type="submit">Generate New</button>
+                        <a target="_blank" href="https://www.dispostable.com/inbox/{{ $user->username }}/"
+                           class="btn btn-success">Jump To Inbox</a>
+                    </form>
                 </div>
             </div>
             <div class="col-12">

@@ -32,3 +32,16 @@ a {
     background-color: aliceblue;
 }
 
+.gender-filter {
+    width: 20%;
+    margin-bottom: 24px;
+}
+
+/**
+generic
+ */
+
+.mr-20 {
+    margin-right: 20px !important;
+}
+
