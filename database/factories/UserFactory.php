@@ -15,7 +15,7 @@ class UserFactory extends Factory
      */
     public function definition(): array
     {
-        $gender = ['male', 'female'][rand(0, 1)];
+        $gender = genders()[rand(0, 1)];
 
         $firstName = $gender === 'male' ? $this->faker->firstNameMale() : $this->faker->firstNameFemale();
         $lastName = $this->faker->lastName();

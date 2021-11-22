@@ -10,3 +10,13 @@ if (!function_exists('keyFormatter')) {
         return ucwords(str_replace('_', ' ', $key));
     }
 }
+
+if (!function_exists('genders')) {
+    /**
+     * @return array
+     */
+    function genders(): array
+    {
+        return ['male', 'female'];
+    }
+}
