@@ -1,19 +1,19 @@
 <nav aria-label="Primary navigation"
      class="navbar navbar-main navbar-expand-lg navbar-theme-primary headroom navbar-light navbar-theme-secondary"
      id="navbar-main">
-    <div class="container position-relative">
-        <a class="navbar-brand mr-lg-4" href="./index.html">
+    <div class="container-fluid w-25 position-relative">
+        {{--<a class="navbar-brand mr-lg-4" href="./index.html">
             <img alt="Logo light" class="navbar-brand-dark" src="./assets/img/light.svg">
             <img alt="Logo dark" class="navbar-brand-light" src="./assets/img/dark.svg">
-        </a>
+        </a>--}}
         <div class="navbar-collapse collapse mr-auto" id="navbar_global">
             <div class="navbar-collapse-header">
                 <div class="row">
-                    <div class="col-6 collapse-brand">
+                    {{--<div class="col-6 collapse-brand">
                         <a href="./index.html">
                             <img alt="Logo dark" src="./assets/img/dark.svg">
                         </a>
-                    </div>
+                    </div>--}}
                     <div class="col-6 collapse-close">
                         <a aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation"
                            class="fas fa-times" data-target="#navbar_global" data-toggle="collapse"
@@ -22,37 +22,19 @@
                 </div>
             </div>
             <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">
-                        About
+                <li class="nav-item @if(request()->is('user')) active @endif">
+                    <a class="nav-link" href="{{ url('/user') }}">
+                        User Generator
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#testimonials">
-                        Testimonials
+                {{--<li class="nav-item @if(request()->is('content')) active @endif">
+                    <a class="nav-link" href="{{ url('/content') }}">
+                        Content Generator
                     </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#faq">
-                        FAQ
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#download">
-                        Download
-                    </a>
-                </li>
+                </li>--}}
             </ul>
         </div>
         <div class="d-flex align-items-center">
-            <a class="btn btn-outline-soft d-none d-md-inline mr-md-3 animate-up-2"
-               href="https://themesberg.com/product/bootstrap/swipe-free-mobile-app-one-page-bootstrap-5-template"
-               target="_blank">Free
-                download</a>
-            <a class="btn btn-md btn-tertiary text-white d-none d-md-inline animate-up-2"
-               href="https://themesberg.com/product/ui-kit/pixel-pro-premium-bootstrap-5-ui-kit"
-               target="_blank">Upgrade to Pro<i
-                    class="fas fa-rocket ml-2"></i></a>
             <button aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation"
                     class="navbar-toggler ml-2"
                     data-target="#navbar_global" data-toggle="collapse" type="button">

@@ -1,47 +1,11 @@
-body {
-    font-family: 'Nunito Sans', sans-serif;
-}
-
-.btn {
-    border-radius: 0 !important;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-    font-weight: bolder;
-}
-
-.user-info-card {
-    margin-top: 120px;
-}
-
-.float-right {
-    float: right !important;
-}
-
 .cursor-pointer {
     cursor: pointer;
 }
 
-.value-td {
-    width: 80% !important;
+.active {
+    border-bottom: 2px solid grey !important;
 }
 
-.value-td:hover {
-    background-color: aliceblue;
+.copy:hover {
+    background-color: lightcyan;
 }
-
-.gender-filter {
-    width: 20%;
-    margin-bottom: 24px;
-}
-
-/**
-generic
- */
-
-.mr-20 {
-    margin-right: 20px !important;
-}
-

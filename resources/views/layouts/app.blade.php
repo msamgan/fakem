@@ -20,7 +20,7 @@
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
     <!-- Primary Meta Tags -->
-    <title>Swipe - Mobile App One Page Bootstrap 5 Template</title>
+    <title>{{ config('app.name') }}</title>
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
     <meta content="Swipe - Mobile App One Page Bootstrap 5 Template" name="title">
     <meta content="Themesberg" name="author">
@@ -62,6 +62,7 @@
 
     <!-- Swipe CSS -->
     <link href="{{ asset('theme/css/swipe.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('/css/style.css') }}" rel="stylesheet" type="text/css">
 
     <!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
 
@@ -74,11 +75,15 @@
 <main>
     <!-- Hero -->
     <section class="section section-header text-dark pb-md-8">
-        <div class="container">
+        <div class="container-fluid w-75">
             <div class="row justify-content-center">
                 <div class="col-12 col-md-10 text-center mb-5 mb-md-7">
-                    <p class="lead mb-4 mb-lg-5">Simpler remembers your important details, so you can fill carts, not
-                        forms. And everything is encrypted so you can speed safely through checkout.</p>
+                    <p class="lead mb-4 mb-lg-5 text-left">
+                        Fakem is a open source fake user generator which is the most easy to use user generator
+                        available out there.
+                        It also provide you with ready to use temporary email inbox, available at just one click.
+                        Generate names, addresses, about content etc, for absolute free of any charge.
+                    </p>
                     <div>
                         @yield('content')
                     </div>
@@ -100,8 +105,12 @@
         <div class="row pt-2 pt-lg-5">
             <div class="col mb-md-0">
                 <div class="d-flex text-center justify-content-center align-items-center" role="contentinfo">
-                    <p class="font-weight-normal font-small mb-0">Copyright © Themesberg 2019-<span
+                    <p class="font-weight-normal font-small mb-0">Copyright © fakem.dev {{ date('Y') }}-<span
                             class="current-year">2020</span>. All rights reserved.</p>
+
+                </div>
+                <div class=" text-center justify-content-center align-items-center">
+                    created by: <a target="_blank" href="https://github.com/msamgan">msamgan</a>
                 </div>
             </div>
         </div>
@@ -109,6 +118,10 @@
 </footer>
 
 <!-- Core -->
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
 <script src="{{ asset('theme/vendor/popper.js/dist/umd/popper.min.js') }}"></script>
 <script src="{{ asset('theme/vendor/bootstrap/dist/js/bootstrap.min.js') }}"></script>
 <script src="{{ asset('theme/vendor/headroom.js/dist/headroom.min.js') }}"></script>
@@ -121,6 +134,8 @@
 
 <!-- Swipe JS -->
 <script src="{{ asset('theme/assets/js/swipe.js') }}"></script>
+<script src="{{ asset('js/notify.min.js') }}"></script>
+<script src="{{ asset('js/main.js') }}"></script>
 
 </body>
 
