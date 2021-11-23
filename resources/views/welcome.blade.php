@@ -1,44 +1,46 @@
-@extends('layouts.master')
-@section('content')
-    <div class="container w-50">
-        <div class="row user-info-card">
-            <div class="col-12">
-                <div class="mb-2 mr-2">
-                    <form  class="d-flex align-items-center">
-                        <div class="form-group mr-20 gender-filter">
-                            <label for="gender"><strong>Gender</strong></label>
-                            <select id="gender" name="gender" class="form-control">
-                                <option value="any">Any</option>
-                                @foreach(genders() as $gender)
-                                    <option @if(request('gender') === $gender) selected
-                                            @endif value="{{ $gender }}">{{ $gender }}</option>
-                                @endforeach
-                            </select>
-                        </div>
+@extends('layouts.app')
 
-                        <button class="btn btn-primary mr-20" type="submit">Generate New</button>
-                        <a target="_blank" href="https://www.dispostable.com/inbox/{{ $user->username }}/"
-                           class="btn btn-success">Jump To Inbox</a>
-                    </form>
-                </div>
-            </div>
-            <div class="col-12">
-                <table class="table table-bordered">
-                    <thead>
-                    </thead>
-                    <tbody>
-                    @foreach($user->attributesToArray() as $key => $value)
-                        <tr>
-                            <td><strong>{{ keyFormatter($key) }}</strong></td>
-                            <td data-key="{{ keyFormatter($key) }}" title="click to copy"
-                                class="cursor-pointer copy value-td">
-                                {{ $value }}
-                            </td>
-                        </tr>
-                    </tbody>
+@section('content')
+    <form>
+        <div class="row mb-3">
+            <div class="col-md-3">
+                <label class="float-left" for="gender"><strong>Gender</strong></label>
+                <select id="gender" name="gender" class="form-control">
+                    <option value="any">Any</option>
+                    @foreach(genders() as $gender)
+                        <option @if(request('gender') === $gender) selected
+                                @endif value="{{ $gender }}">{{ $gender }}</option>
                     @endforeach
-                </table>
+                </select>
             </div>
+            <div class="col-md-2">
+                <button class="btn btn-primary" style="float: left; margin-top: 32px;" type="submit">
+                    Generate New
+                </button>
+            </div>
+            <div class="col-md-7">
+                <a target="_blank" href="https://www.dispostable.com/inbox/{{ $user->username }}/"
+                   class="btn btn-danger" style="float: right; margin-top: 32px;">
+                    Jump To Inbox
+                </a>
+            </div>
+        </div>
+    </form>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-bordered">
+                <tbody>
+                @foreach($user->attributesToArray() as $key => $value)
+                    <tr>
+                        <td class="text-left w-25"><strong>{{ keyFormatter($key) }}</strong></td>
+                        <td data-key="{{ keyFormatter($key) }}" title="click to copy"
+                            class="cursor-pointer copy text-left">
+                            {{ $value }}
+                        </td>
+                    </tr>
+                @endforeach
+                </tbody>
+            </table>
         </div>
     </div>
 @endsection

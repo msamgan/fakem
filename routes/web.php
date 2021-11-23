@@ -15,6 +15,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    return redirect('/user');
+});
+
+Route::get('/user', function () {
+    return view('welcome')->with([
+        'user' => User::randomUser()
+    ]);
+});
+
+Route::get('/content', function () {
     return view('welcome')->with([
         'user' => User::randomUser()
     ]);
