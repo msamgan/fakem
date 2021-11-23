@@ -1,11 +1,11 @@
-@extends('layouts.master')
+@extends('layouts.app')
 @section('content')
-    <div class="container w-50">
+    <div class="">
         <div class="row user-info-card">
             <div class="col-12">
                 <div class="mb-2 mr-2">
-                    <form  class="d-flex align-items-center">
-                        <div class="form-group mr-20 gender-filter">
+                    <form class="d-flex align-items-center">
+                        <div class="form-group mr-20 ">
                             <label for="gender"><strong>Gender</strong></label>
                             <select id="gender" name="gender" class="form-control">
                                 <option value="any">Any</option>
