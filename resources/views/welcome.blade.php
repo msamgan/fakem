@@ -55,7 +55,7 @@
                         <td>{{ $history->user->password }}</td>
                         <td>
                             <a target="_blank" href="https://www.dispostable.com/inbox/{{ $history->user->username }}/"
-                               class="btn btn-danger">
+                               class="btn btn-danger btn-xs">
                                 Jump To Inbox
                             </a>
                         </td>
