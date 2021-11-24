@@ -52,6 +52,10 @@ class User extends Authenticatable
      */
     public static function randomUser()
     {
+        if (request('email')) {
+            return User::query()->where('email', request('email'))->first();
+        }
+
         $user = User::query()->inRandomOrder();
         if (request('gender') && in_array(request('gender'), genders())) {
             $user->where('gender', request('gender'));
