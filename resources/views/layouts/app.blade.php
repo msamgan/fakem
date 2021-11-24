@@ -68,7 +68,7 @@
 
 </head>
 
-<body>
+<body style="background-image: url({{ asset('img/bg.jpg') }})">
 <header class="header-global" id="home">
     @include('partials.nav')
 </header>
@@ -93,7 +93,7 @@
     </section>
 </main>
 
-<footer class="footer py-5 pt-lg-6">
+<footer class="footer py-5 pt-lg-6 footer-bg">
     <div class="sticky-right">
         <a class="icon icon-primary icon-md btn btn-icon-only btn-white border border-soft shadow-soft animate-up-3"
            href="#home">
@@ -110,7 +110,7 @@
 
                 </div>
                 <div class=" text-center justify-content-center align-items-center">
-                    created by: <a target="_blank" href="https://github.com/msamgan">msamgan</a>
+                    created by: <a target="_blank" class="text-white" href="https://github.com/msamgan">msamgan</a>
                 </div>
             </div>
         </div>
