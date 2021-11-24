@@ -105,8 +105,8 @@
         <div class="row pt-2 pt-lg-5">
             <div class="col mb-md-0">
                 <div class="d-flex text-center justify-content-center align-items-center" role="contentinfo">
-                    <p class="font-weight-normal font-small mb-0">Copyright © fakem.dev {{ date('Y') }}-<span
-                            class="current-year">2020</span>. All rights reserved.</p>
+                    <p class="font-weight-normal font-small mb-0">Copyright © fakem.dev <span
+                            class="current-year">{{ date('Y') }}</span>. All rights reserved.</p>
 
                 </div>
                 <div class=" text-center justify-content-center align-items-center">
