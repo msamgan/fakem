@@ -57,6 +57,13 @@ class User extends Authenticatable
             $user->where('gender', request('gender'));
         }
 
-        return $user->first();
+        $user = $user->first();
+
+        History::create([
+            'user_id' => $user->id,
+            'ip_address' => request()->getClientIp()
+        ]);
+
+        return $user;
     }
 }
