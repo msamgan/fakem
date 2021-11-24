@@ -27,11 +27,11 @@
                         User Generator
                     </a>
                 </li>
-                {{--<li class="nav-item @if(request()->is('content')) active @endif">
+                <li class="nav-item @if(request()->is('content')) active @endif">
                     <a class="nav-link" href="{{ url('/content') }}">
                         Content Generator
                     </a>
-                </li>--}}
+                </li>
             </ul>
         </div>
         <div class="d-flex align-items-center">
