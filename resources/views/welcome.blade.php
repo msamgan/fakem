@@ -43,4 +43,25 @@
             </table>
         </div>
     </div>
+    <hr/>
+    <div class="row mt-5">
+        <div class="col-md-12 text-left">
+            <h3>Last Few Users</h3>
+            <table class="table mt-3">
+                @foreach($histories as $history)
+                    <tr>
+                        <td>{{ $history->user->name }}</td>
+                        <td>{{ $history->user->email }}</td>
+                        <td>{{ $history->user->password }}</td>
+                        <td>
+                            <a target="_blank" href="https://www.dispostable.com/inbox/{{ $history->user->username }}/"
+                               class="btn btn-danger">
+                                Jump To Inbox
+                            </a>
+                        </td>
+                    </tr>
+                @endforeach
+            </table>
+        </div>
+    </div>
 @endsection

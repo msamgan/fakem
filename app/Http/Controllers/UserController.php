@@ -23,7 +23,7 @@ class UserController extends Controller
     {
         return view('welcome')->with([
             'user' => User::randomUser(),
-            'history' => History::history()
+            'histories' => History::history()
         ]);
     }
 }

@@ -26,6 +26,8 @@ class History extends Model
             ->where('ip_address', request()->getClientIp())
             ->with(['user'])
             ->limit(HISTORY_SIZE)
+            ->offset(1)
+            ->orderBy('id', 'DESC')
             ->get();
     }
 
