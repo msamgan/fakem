@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
@@ -18,14 +19,11 @@ Route::get('/', function () {
     return redirect('/user');
 });
 
-Route::get('/user', function () {
-    return view('welcome')->with([
-        'user' => User::randomUser()
-    ]);
-});
+Route::get('/user', [UserController::class, 'index']);
 
+/*
 Route::get('/content', function () {
     return view('welcome')->with([
         'user' => User::randomUser()
     ]);
-});
+});*/

@@ -1,5 +1,7 @@
 <?php
 
+const HISTORY_SIZE = 5;
+
 if (!function_exists('keyFormatter')) {
     /**
      * @param $key
