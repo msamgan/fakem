@@ -68,8 +68,8 @@
             <table class="table mt-3">
                 @foreach($histories as $history)
                     <tr>
-                        <td>{{ $history->user->name }}</td>
-                        <td>{{ $history->user->email }}</td>
+                        <td data-key="{{ 'Name' }}" class="cursor-pointer copy">{{ $history->user->name }}</td>
+                        <td data-key="{{ 'Email' }}" class="cursor-pointer copy">{{ $history->user->email }}</td>
                         <td>{{ $history->user->password }}</td>
                         <td>
                             <a target="_blank" href="https://www.dispostable.com/inbox/{{ $history->user->username }}/"
