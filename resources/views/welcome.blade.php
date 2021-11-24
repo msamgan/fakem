@@ -3,6 +3,24 @@
 @section('content')
     <form>
         <div class="row mb-3">
+            <div class="col-md-4">
+                <label class="float-left" for="email-search"><strong>Email</strong></label>
+                <input class="form-control"
+                       placeholder="Search User by email"
+                       required
+                       value="{{ request('email') }}"
+                       name="email" type="text" id="email-search">
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-primary" style="float: left; margin-top: 32px;" type="submit">
+                    Search
+                </button>
+            </div>
+        </div>
+    </form>
+    <hr/>
+    <form>
+        <div class="row mb-3">
             <div class="col-md-3">
                 <label class="float-left" for="gender"><strong>Gender</strong></label>
                 <select id="gender" name="gender" class="form-control">
