@@ -68,7 +68,7 @@
 
 </head>
 
-<body style="background-image: url({{ asset('img/bg.jpg') }})">
+<body>
 <header class="header-global" id="home">
     @include('partials.nav')
 </header>
