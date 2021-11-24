@@ -1,8 +1,8 @@
 <?php
 
 const HISTORY_SIZE = 10;
-const DEFAULT_WORD_COUNT = 250;
-const DEFAULT_PARA_COUNT = 1;
+const DEFAULT_WORD_COUNT = 100;
+const DEFAULT_PARA_COUNT = 2;
 
 if (!function_exists('keyFormatter')) {
     /**
