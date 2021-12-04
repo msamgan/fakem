@@ -18,6 +18,9 @@ php artisan auth:clear-resets
 php artisan view:cache
 php artisan optimize
 
+# restart server to reset preload.
+systemctl restart nginx
+
 # Install node modules
 #npm install
 
