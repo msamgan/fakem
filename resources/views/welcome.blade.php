@@ -36,29 +36,35 @@
                     Generate New
                 </button>
             </div>
-            <div class="col-md-7">
-                <a target="_blank" href="https://www.dispostable.com/inbox/{{ $user->username }}/"
-                   class="btn btn-danger" style="float: right; margin-top: 32px;">
-                    Jump To Inbox
-                </a>
-            </div>
+            @if($user)
+                <div class="col-md-7">
+                    <a target="_blank" href="https://www.dispostable.com/inbox/{{ $user->username }}/"
+                       class="btn btn-danger" style="float: right; margin-top: 32px;">
+                        Jump To Inbox
+                    </a>
+                </div>
+            @endif
         </div>
     </form>
     <div class="row">
         <div class="col-md-12">
-            <table class="table table-bordered">
-                <tbody>
-                @foreach($user->attributesToArray() as $key => $value)
-                    <tr>
-                        <td class="text-left w-25"><strong>{{ keyFormatter($key) }}</strong></td>
-                        <td data-key="{{ keyFormatter($key) }}" title="click to copy"
-                            class="cursor-pointer copy text-left">
-                            {{ $value }}
-                        </td>
-                    </tr>
-                @endforeach
-                </tbody>
-            </table>
+            @if($user)
+                <table class="table table-bordered">
+                    <tbody>
+                    @foreach($user->attributesToArray() as $key => $value)
+                        <tr>
+                            <td class="text-left w-25"><strong>{{ keyFormatter($key) }}</strong></td>
+                            <td data-key="{{ keyFormatter($key) }}" title="click to copy"
+                                class="cursor-pointer copy text-left">
+                                {{ $value }}
+                            </td>
+                        </tr>
+                    @endforeach
+                    </tbody>
+                </table>
+            @else
+                <p class="text-left">User Not Found...</p>
+            @endif
         </div>
     </div>
     <hr/>
