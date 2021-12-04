@@ -70,4 +70,12 @@ class User extends Authenticatable
 
         return $user;
     }
+
+    /**
+     * @return string
+     */
+    public function getRouteKeyName(): string
+    {
+        return 'username';
+    }
 }
