@@ -22,29 +22,35 @@
     <!-- Primary Meta Tags -->
     <title>{{ config('app.name') }}</title>
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
-    <meta content="Swipe - Mobile App One Page Bootstrap 5 Template" name="title">
-    <meta content="Themesberg" name="author">
-    <meta content="Free Mobile Application One Page Bootstrap 5 Template by Themesberg" name="description">
+    <meta content="Fakem, Fake user and email generator" name="title">
+    <meta content="msamgan" name="author">
     <meta
-        content="bootstrap, bootstrap 5, bootstrap 5 one page, bootstrap 5 mobile application, one page template, bootstrap 5 one page template, themesberg, themesberg one page, one page template bootstrap 5"
+        content="Fakem is a open source fake user generator which is the most easy to use user generator available out there by msamgan"
+        name="description">
+    <meta
+        content="fake name generator, fake content generator, fake user, fake data"
         name="keywords"/>
-    <link href="https://themesberg.com/product/bootstrap/swipe-free-mobile-app-one-page-bootstrap-5-template"
+    <link href="https://fakem.info"
           rel="canonical">
 
     <!-- Open Graph / Facebook -->
     <meta content="website" property="og:type">
-    <meta content="https://demo.themesberg.com/swipe/" property="og:url">
-    <meta content="Swipe - Mobile App One Page Bootstrap 5 Template" property="og:title">
-    <meta content="Free Mobile Application One Page Bootstrap 5 Template by Themesberg" property="og:description">
-    <meta content="https://themesberg.s3.us-east-2.amazonaws.com/public/products/swipe/swipe-thumbnail.jpg"
+    <meta content="https://fakem.info/" property="og:url">
+    <meta content="Fakem, Fake user and email generator" property="og:title">
+    <meta
+        content="Fakem is a open source fake user generator which is the most easy to use user generator available out there by msamgan"
+        property="og:description">
+    <meta content=""
           property="og:image">
 
     <!-- Twitter -->
     <meta content="summary_large_image" property="twitter:card">
-    <meta content="https://demo.themesberg.com/swipe/" property="twitter:url">
-    <meta content="Swipe - Mobile App One Page Bootstrap 5 Template" property="twitter:title">
-    <meta content="Free Mobile Application One Page Bootstrap 5 Template by Themesberg" property="twitter:description">
-    <meta content="https://themesberg.s3.us-east-2.amazonaws.com/public/products/swipe/swipe-thumbnail.jpg"
+    <meta content="https://fakem.info/" property="twitter:url">
+    <meta content="Fakem, Fake user and email generator" property="twitter:title">
+    <meta
+        content="Fakem is a open source fake user generator which is the most easy to use user generator available out there by msamgan"
+        property="twitter:description">
+    <meta content=""
           property="twitter:image">
 
     <!-- Favicon -->
@@ -105,7 +111,7 @@
         <div class="row pt-2 pt-lg-5">
             <div class="col mb-md-0">
                 <div class="d-flex text-center justify-content-center align-items-center" role="contentinfo">
-                    <p class="font-weight-normal font-small mb-0">Copyright © fakem.dev <span
+                    <p class="font-weight-normal font-small mb-0">Copyright © fakem.info <span
                             class="current-year">{{ date('Y') }}</span>. All rights reserved.</p>
 
                 </div>
