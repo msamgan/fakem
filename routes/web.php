@@ -22,3 +22,4 @@ Route::get('/', function () {
 
 Route::get('/user', [UserController::class, 'index']);
 Route::get('/content', [ContentController::class, 'index']);
+Route::get('/api', [UserController::class, 'api']);

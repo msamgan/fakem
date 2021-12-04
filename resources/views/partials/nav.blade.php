@@ -32,6 +32,11 @@
                         Content
                     </a>
                 </li>
+                <li class="nav-item @if(request()->is('api')) active @endif">
+                    <a class="nav-link" href="{{ url('/api') }}">
+                        Test Api's
+                    </a>
+                </li>
             </ul>
         </div>
         <div class="d-flex align-items-center" style="margin-right: 98px">

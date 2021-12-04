@@ -26,4 +26,9 @@ class UserController extends Controller
             'histories' => History::history()
         ]);
     }
+
+    public function api()
+    {
+        return view('api');
+    }
 }
