@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\User;
+use Database\Factories\ContentFactory;
 use Illuminate\Support\Facades\Route;
 
 
@@ -11,4 +12,12 @@ Route::get('users', function () {
 
 Route::get('user/{user}', function (User $user) {
     return $user;
+});
+
+Route::get('user', function () {
+    return User::randomUser();
+});
+
+Route::get('content', function () {
+    return (new ContentFactory())->definition()['content'];
 });
