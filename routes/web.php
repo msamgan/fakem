@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return redirect('/user');
+    return response()->json('server up and running...');
 });
 
 Route::get('/user', [UserController::class, 'index']);
